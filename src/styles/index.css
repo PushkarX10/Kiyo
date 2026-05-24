@@ -1,0 +1,21 @@
+@import './fonts.css';
+@import './tailwind.css';
+@import './theme.css';
+
+/* Compact UI styles applied globally when document.documentElement has .compact-ui class */
+.compact-ui .p-6 {
+  padding: 1rem !important;
+}
+
+.compact-ui .space-y-6 > * + * {
+  margin-top: 1rem !important;
+}
+
+.compact-ui .h-16 {
+  height: 3.5rem !important;
+}
+
+.compact-ui td, .compact-ui th {
+  padding-top: 0.25rem !important;
+  padding-bottom: 0.25rem !important;
+}
