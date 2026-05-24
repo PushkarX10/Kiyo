@@ -263,7 +263,8 @@ export function DashboardScreen() {
   }, []);
 
   useEffect(() => {
-    const ws = new WebSocket("ws://localhost:3001/ws/sensors");
+    const wsUrl = import.meta.env.VITE_WS_BASE_URL || "ws://localhost:3001/ws/sensors";
+    const ws = new WebSocket(wsUrl);
     wsRef.current = ws;
     ws.onmessage = handleWsMessage;
     ws.onerror = () => console.log("[WS] Connection error — is the server running?");
